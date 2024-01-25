@@ -1,5 +1,4 @@
 /* FONTS */
-/* open-sans-300 - latin */
 @font-face {
   font-display: swap; 
   font-family: 'Open Sans';
@@ -7,7 +6,6 @@
   font-weight: 300;
   src: url('../fonts/open-sans-v40-latin-300.woff2') format('woff2');
 }
-/* open-sans-regular - latin */
 @font-face {
   font-display: swap; 
   font-family: 'Open Sans';
@@ -15,7 +13,6 @@
   font-weight: 400;
   src: url('../fonts/open-sans-v40-latin-regular.woff2') format('woff2'); 
 }
-/* open-sans-500 - latin */
 @font-face {
   font-display: swap; 
   font-family: 'Open Sans';
@@ -23,7 +20,6 @@
   font-weight: 500;
   src: url('../fonts/open-sans-v40-latin-500.woff2') format('woff2');
 }
-/* open-sans-600 - latin */
 @font-face {
   font-display: swap; 
   font-family: 'Open Sans';
@@ -31,7 +27,6 @@
   font-weight: 600;
   src: url('../fonts/open-sans-v40-latin-600.woff2') format('woff2'); 
 }
-/* open-sans-700 - latin */
 @font-face {
   font-display: swap; 
   font-family: 'Open Sans';
@@ -39,7 +34,6 @@
   font-weight: 700;
   src: url('../fonts/open-sans-v40-latin-700.woff2') format('woff2');
 }
-/* open-sans-800 - latin */
 @font-face {
   font-display: swap; 
   font-family: 'Open Sans';
@@ -53,8 +47,8 @@
   --colorPrimary: #242424;
   --colorSecondary: #333333;
   /* backgrounds */
-  --backgroundPrimary: #AAAAAA;
-  --backgroundSecondary: #F4F4F4;
+  --backgroundPrimary:  #ffffff;
+  --backgroundSecondary:  #F4F4F4;;
   /* btn colors */
   --btnColor: #BB2339;
   --btnHover: #fff;
@@ -62,7 +56,7 @@
   /* fonts */
   --fontFamily:" Open Sans", sans-serif;
   --fontWeight: 400;
- }
+}
 
 * {
   box-sizing: border-box;
@@ -83,8 +77,8 @@ body {
   flex-direction: column;
   font-family: var(--fontFamily);
   font-weight: var(--fontWeight);
-   background-color: var(--backgroundPrimary);
- }
+  background-color: var(--backgroundPrimary);
+}
 
 .visually-hidden {
   clip: rect(0 0 0 0);
@@ -102,7 +96,7 @@ main {
 
 .container {
   width: 100%;
-  max-width: 1230px;
+  max-width: 1330px;
   margin: 0 auto;
   padding: 0 15px;
 }
@@ -116,3 +110,173 @@ a {
   text-decoration: none;
   background-color: transparent;
 }
+
+/* ---------------------------HEADER STYLE START ------------------------------- */
+.site-header{
+  padding: 26px 0;
+  background-color: #BB2339;
+}
+
+.site-header__wrapper{
+  
+  display: flex;
+  justify-content: space-between; 
+  align-items: center;
+}
+
+.site-header__wrapper-start{
+  width: 100%;
+  max-width: 1300px;
+  display: flex;
+  justify-content:space-between;
+  align-items: center;
+}
+
+.site-header__nav{
+  display: block;
+}
+.site-header__nav-list{
+  
+  display: flex;
+  align-items: center;
+  gap: 40px;
+}
+
+.site-header__logo-img{
+  width: 147px;
+  height: 47px;}
+  
+  
+  .site-header__btn{
+    color: #FFF;
+    font-family: "Open Sans";
+    font-size: 16px;
+    font-weight: 600;
+    line-height: 175%;  
+    letter-spacing: 0.8px;
+    padding: 10px 40px;
+    gap: 10px;
+    border-radius: 100px;
+    border: 1px solid #FFF;
+  }
+  .site-header__link{
+    color: #FFF;
+    font-family: "Open Sans";
+    font-size: 16px;
+    font-style: normal;
+    font-weight: 400;
+    line-height: normal;
+    letter-spacing: 0.64px;
+  }
+  .site-header__nav-item{
+    
+  }
+  
+  .site-header__logo-img{
+    width: 135px;
+    height: 47px;
+  }
+  
+  .site-header__menu-btn{
+    display: none;
+    border:none;
+    background-color:transparent;
+    padding-right: 5px;
+  }
+  /* ------------------------------HIDDEN HEADER START --------------------------------- */
+  /* .hidden-header{
+    position: fixed;
+    top: 80px;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    z-index:50;
+    display: flex;
+    justify-content: center;
+    padding-top: 40px;
+    background-image: linear-gradient(
+    180deg, rgbacc(254 ,252,  247, 0.5)0%
+    #fefcf7 55.94%
+    );
+    transform: translateY(-150%);
+    transition: all 0.5s ease;
+  }
+  .hidden-header.show-header{
+    transform: translateY(0);
+  }
+  
+  .hidden-header__nav-item:not(last-child){
+    margin-bottom: 32px;
+    
+  }
+  
+  .hidden-header__nav-list{
+    text-align: center;
+  }
+  
+  .hidden-header__nav-link{
+    color: #333d;
+    font-family: 'Courier New', Courier, monospace;
+    font-size: 24px;
+    line-height: 32px;
+    
+  } */
+  
+  
+  /* ------------------------------HIDDEN HEADER END --------------------------------- */
+  
+  /* ------------------------------MEDIA START --------------------------------- */
+  @media only screen and (max-width:767px){
+    .site-header__menu-btn{
+      display: block;
+    }
+    .site-header__nav{ 
+      display: none;
+    }
+    .site-header{
+      padding: 32px 0;
+      
+    }
+    .site-header__wrapper{
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+    }
+    .site-header__wrapper-start{
+      justify-content:center ;
+    }
+    .site-header__logo-img{
+      width: 125px;
+      height: 44px;
+    }
+    
+  }
+  
+  @media only screen and(min-width:768px){
+    .site-header{
+      padding: 26px 0;
+      
+    }
+    
+  }
+  
+  /* ------------------------------MEDIA END --------------------------------- */
+  
+  
+  /* ---------------------------HEADER STYLE END ------------------------------- */
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
+  
